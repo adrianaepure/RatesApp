@@ -3,18 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3A4B19982494C41700C04289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19972494C41700C04289 /* AppDelegate.swift */; };
 		3A4B199A2494C41700C04289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19992494C41700C04289 /* SceneDelegate.swift */; };
-		3A4B199C2494C41800C04289 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B199B2494C41800C04289 /* ViewController.swift */; };
+		3A4B199C2494C41800C04289 /* LatestRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B199B2494C41800C04289 /* LatestRatesVC.swift */; };
 		3A4B199F2494C41800C04289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B199D2494C41800C04289 /* Main.storyboard */; };
 		3A4B19A12494C41D00C04289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B19A02494C41D00C04289 /* Assets.xcassets */; };
 		3A4B19A42494C41D00C04289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B19A22494C41D00C04289 /* LaunchScreen.storyboard */; };
 		3A4B19AF2494C41D00C04289 /* RatesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19AE2494C41D00C04289 /* RatesAppTests.swift */; };
 		3A4B19BA2494C41D00C04289 /* RatesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19B92494C41D00C04289 /* RatesAppUITests.swift */; };
+		3A634B322494CB5A00E9E9C0 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B312494CB5A00E9E9C0 /* RateModel.swift */; };
+		3A634B342494CB6E00E9E9C0 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B332494CB6E00E9E9C0 /* Currency.swift */; };
+		3A634B362494CF9800E9E9C0 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B352494CF9800E9E9C0 /* WebServiceManager.swift */; };
+		3A634B382494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */; };
+		3A634B392494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */; };
+		3A634B3A2494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */; };
+		3A634B3C2494D7C100E9E9C0 /* RatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */; };
+		3A634B3D2494D7C100E9E9C0 /* RatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */; };
+		3A634B3E2494D7C100E9E9C0 /* RatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */; };
+		3A634B412494F73800E9E9C0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B402494F73800E9E9C0 /* DoubleExtension.swift */; };
+		3A634B422494F73800E9E9C0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B402494F73800E9E9C0 /* DoubleExtension.swift */; };
+		3A634B432494F73800E9E9C0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B402494F73800E9E9C0 /* DoubleExtension.swift */; };
+		3A634B452494F78900E9E9C0 /* StringToDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */; };
+		3A634B462494F78900E9E9C0 /* StringToDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */; };
+		3A634B472494F78900E9E9C0 /* StringToDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */; };
+		3A634B4D2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */; };
+		3A634B4E2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */; };
+		3A634B4F2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */; };
+		3A634B51249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */; };
+		3A634B52249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */; };
+		3A634B53249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */; };
+		AC16705C4AE422E10D2BD4E9 /* Pods_RatesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D21E2621946B099A72E38C8 /* Pods_RatesApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		325B381A7B0E1425BFD48A64 /* Pods-RatesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesApp.debug.xcconfig"; path = "Target Support Files/Pods-RatesApp/Pods-RatesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3A4B19942494C41700C04289 /* RatesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4B19972494C41700C04289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A4B19992494C41700C04289 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A4B199B2494C41800C04289 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A4B199B2494C41800C04289 /* LatestRatesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesVC.swift; sourceTree = "<group>"; };
 		3A4B199E2494C41800C04289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A4B19A02494C41D00C04289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4B19A32494C41D00C04289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,17 @@
 		3A4B19B52494C41D00C04289 /* RatesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4B19B92494C41D00C04289 /* RatesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAppUITests.swift; sourceTree = "<group>"; };
 		3A4B19BB2494C41D00C04289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A634B312494CB5A00E9E9C0 /* RateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
+		3A634B332494CB6E00E9E9C0 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		3A634B352494CF9800E9E9C0 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesVM.swift; sourceTree = "<group>"; };
+		3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesClient.swift; sourceTree = "<group>"; };
+		3A634B402494F73800E9E9C0 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateExtension.swift; sourceTree = "<group>"; };
+		3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesVC.swift; sourceTree = "<group>"; };
+		3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesVM.swift; sourceTree = "<group>"; };
+		3D21E2621946B099A72E38C8 /* Pods_RatesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC941D96CCABFAABA2F0EB57 /* Pods-RatesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesApp.release.xcconfig"; path = "Target Support Files/Pods-RatesApp/Pods-RatesApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC16705C4AE422E10D2BD4E9 /* Pods_RatesApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +118,8 @@
 				3A4B19AD2494C41D00C04289 /* RatesAppTests */,
 				3A4B19B82494C41D00C04289 /* RatesAppUITests */,
 				3A4B19952494C41700C04289 /* Products */,
+				8460D8F96ABD9BDE881E7002 /* Pods */,
+				DFEDE13D100DADF1AF795C88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +136,18 @@
 		3A4B19962494C41700C04289 /* RatesApp */ = {
 			isa = PBXGroup;
 			children = (
+				3A634B2F2494CB1800E9E9C0 /* Models */,
+				3A634B302494CB2000E9E9C0 /* Views */,
+				3A634B2D2494CB0600E9E9C0 /* ViewModels */,
+				3A634B2E2494CB0E00E9E9C0 /* ViewControllers */,
+				3A634B2C2494CAF800E9E9C0 /* WebService */,
 				3A4B19972494C41700C04289 /* AppDelegate.swift */,
 				3A4B19992494C41700C04289 /* SceneDelegate.swift */,
-				3A4B199B2494C41800C04289 /* ViewController.swift */,
 				3A4B199D2494C41800C04289 /* Main.storyboard */,
 				3A4B19A02494C41D00C04289 /* Assets.xcassets */,
 				3A4B19A22494C41D00C04289 /* LaunchScreen.storyboard */,
 				3A4B19A52494C41D00C04289 /* Info.plist */,
+				3A634B3F2494F71800E9E9C0 /* Extensions */,
 			);
 			path = RatesApp;
 			sourceTree = "<group>";
@@ -128,6 +170,75 @@
 			path = RatesAppUITests;
 			sourceTree = "<group>";
 		};
+		3A634B2C2494CAF800E9E9C0 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				3A634B352494CF9800E9E9C0 /* WebServiceManager.swift */,
+				3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		3A634B2D2494CB0600E9E9C0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */,
+				3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A634B2E2494CB0E00E9E9C0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A4B199B2494C41800C04289 /* LatestRatesVC.swift */,
+				3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A634B2F2494CB1800E9E9C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A634B312494CB5A00E9E9C0 /* RateModel.swift */,
+				3A634B332494CB6E00E9E9C0 /* Currency.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A634B302494CB2000E9E9C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A634B3F2494F71800E9E9C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A634B402494F73800E9E9C0 /* DoubleExtension.swift */,
+				3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8460D8F96ABD9BDE881E7002 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				325B381A7B0E1425BFD48A64 /* Pods-RatesApp.debug.xcconfig */,
+				BC941D96CCABFAABA2F0EB57 /* Pods-RatesApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DFEDE13D100DADF1AF795C88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D21E2621946B099A72E38C8 /* Pods_RatesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A4B19BE2494C41D00C04289 /* Build configuration list for PBXNativeTarget "RatesApp" */;
 			buildPhases = (
+				02800ACEB0EDC78D890AE818 /* [CP] Check Pods Manifest.lock */,
 				3A4B19902494C41700C04289 /* Sources */,
 				3A4B19912494C41700C04289 /* Frameworks */,
 				3A4B19922494C41700C04289 /* Resources */,
+				FDD6DB479C44B2C4BD27182F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,7 +321,7 @@
 				};
 			};
 			buildConfigurationList = 3A4B198F2494C41700C04289 /* Build configuration list for PBXProject "RatesApp" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -254,14 +367,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02800ACEB0EDC78D890AE818 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RatesApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD6DB479C44B2C4BD27182F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RatesApp/Pods-RatesApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RatesApp/Pods-RatesApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RatesApp/Pods-RatesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A4B19902494C41700C04289 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4B199C2494C41800C04289 /* ViewController.swift in Sources */,
+				3A4B199C2494C41800C04289 /* LatestRatesVC.swift in Sources */,
+				3A634B452494F78900E9E9C0 /* StringToDateExtension.swift in Sources */,
+				3A634B382494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */,
+				3A634B51249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */,
+				3A634B4D2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */,
+				3A634B3C2494D7C100E9E9C0 /* RatesClient.swift in Sources */,
+				3A634B412494F73800E9E9C0 /* DoubleExtension.swift in Sources */,
+				3A634B342494CB6E00E9E9C0 /* Currency.swift in Sources */,
+				3A634B362494CF9800E9E9C0 /* WebServiceManager.swift in Sources */,
 				3A4B19982494C41700C04289 /* AppDelegate.swift in Sources */,
 				3A4B199A2494C41700C04289 /* SceneDelegate.swift in Sources */,
+				3A634B322494CB5A00E9E9C0 /* RateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +433,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A634B422494F73800E9E9C0 /* DoubleExtension.swift in Sources */,
+				3A634B462494F78900E9E9C0 /* StringToDateExtension.swift in Sources */,
 				3A4B19AF2494C41D00C04289 /* RatesAppTests.swift in Sources */,
+				3A634B3D2494D7C100E9E9C0 /* RatesClient.swift in Sources */,
+				3A634B392494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */,
+				3A634B52249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */,
+				3A634B4E2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +447,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A634B432494F73800E9E9C0 /* DoubleExtension.swift in Sources */,
+				3A634B472494F78900E9E9C0 /* StringToDateExtension.swift in Sources */,
 				3A4B19BA2494C41D00C04289 /* RatesAppUITests.swift in Sources */,
+				3A634B3E2494D7C100E9E9C0 /* RatesClient.swift in Sources */,
+				3A634B3A2494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */,
+				3A634B53249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */,
+				3A634B4F2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +608,7 @@
 		};
 		3A4B19BF2494C41D00C04289 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 325B381A7B0E1425BFD48A64 /* Pods-RatesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +627,7 @@
 		};
 		3A4B19C02494C41D00C04289 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC941D96CCABFAABA2F0EB57 /* Pods-RatesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
