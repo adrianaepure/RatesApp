@@ -14,11 +14,6 @@ public enum APIsource: String {
     case latestURL = "https://api.exchangeratesapi.io/latest"
 }
 
-public enum WebServiceManagerError: Error {
-    case invalidURL(String)
-    case parseError(String)
-    case forwarded(Error)
-}
 
 public protocol WebServiceManagerProtocol {
     func fetchData<T>(for url:URL, completionHandler:(T, Error) -> Void)
@@ -26,15 +21,14 @@ public protocol WebServiceManagerProtocol {
 
 public class WebServiceManager{
     func fetchData<T: Codable>(for url: URL, params: Parameters, completionHandler: @escaping (T?, Error?) -> Void){
-        AF.request(url, parameters: params).validate()
+        print("url: ", url)
+        AF.request(url, parameters: params)
             .responseDecodable(of: T.self) { (response) in
                 
                  if response.error != nil {
-                    print(response.error!)
                     completionHandler(nil, response.error)
                 }else{
                     if let parsedJSON = response.value {
-                        print("Parsed JSON", parsedJSON)
                         completionHandler((parsedJSON), nil)
                     }
                 }

@@ -10,11 +10,13 @@ import Foundation
 
 extension String {
     
-    
+    func convertStringToDouble() -> Double?{
+        return Double(self) ?? 0.0
+    }
     
     func convertStringToDate() -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "YYYY-MM-dd"
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.locale = Locale.current
         return dateFormatter.date(from: self) // replace Date String

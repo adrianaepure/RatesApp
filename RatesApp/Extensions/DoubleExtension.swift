@@ -13,4 +13,7 @@ extension Double {
         let multiplier = pow(10, Double(n))
         return (multiplier * self).rounded()/multiplier
     }
+    func formatedString() -> String {
+        return String(self.rounded(toDecimalPlaces: 0))
+    }
 }

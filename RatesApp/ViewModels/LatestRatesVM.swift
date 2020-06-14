@@ -7,44 +7,74 @@
 //
 
 import Foundation
+import UIKit
 
-//public protocol LatestRatesVMProtocol {
-//
-//    func getLatestRates(completion: () -> ())
-//}
-
-class LatestRatesVM  {
-    var baseCurrency: Currency
-    var date: Date!
-    var rates: Array<RateModel>?
-    init(baseCurrency: Currency){
-        self.baseCurrency = baseCurrency
-    }
-    
-    deinit {
-        print("DEINIT LATEST Rates VM")
-    }
+//MARK: -  LatestRatesVMDelegate protocol
+protocol LatestRatesVMDelegate {
+    func didFinishLoading()
 }
+//MARK: - LatestRatesVM class
+public class LatestRatesVM  {
+    var date: String = ""
+    var rates: Array<RateModel> = []
+    var delegate:  LatestRatesVMDelegate?
+    var refreshTimer: Timer?
+}
+
+//MARK: -  LatestRatesVM methods
 extension LatestRatesVM {
-    func getLatestRatesData(completion: () -> ()) {
-        RatesClient.shared.fetchLatestRates(for: Currency.EUR) { (response) in
-            guard let data = response else {return}
-            self.date = data.date.convertStringToDate()
-            let indexPath = IndexPath(row: 0, section: 0)
-            self.rates = data.rates.compactMap {RateModel(currency: $0, value: $1)}
-            print(self.currencyForItemAtIndexPath(index: indexPath))
-            print(self.valueForItemAtIndexPath(index: indexPath))
-            
+    ///fetch latest rates data and send an update when the request is finished
+    @objc func getLatestRatesData() {
+        self.date = ""
+        RatesClient.shared.fetchLatestRates() { (result, error) in
+            DispatchQueue.main.async { [unowned self] in
+                guard let data = result else {return}
+                self.date = Date().customDateFormatter() ?? ""
+                self.rates = data.rates.sorted(by:{ $0.key < $1.key}).compactMap {RateModel(currency: $0, value: $1)}
+                self.delegate?.didFinishLoading()
+                self.refreshLatestCurrencies()
+                
+            }
         }
     }
+    ///method used to get cell currency title in LatestRatesVC
     func currencyForItemAtIndexPath(index:IndexPath) -> String{
-        return self.rates?[Int(index.row)].currency ?? ""
+        return self.rates[Int(index.row)].currency ?? ""
     }
-    func valueForItemAtIndexPath(index:IndexPath) -> Double{
-        return self.rates?[Int(index.row)].value?.rounded(toDecimalPlaces: 2) ?? 0.0
+    ///method used to get cell currency value in LatestRatesVC
+    func valueForItemAtIndexPath(index:IndexPath) -> String{
+        let value = self.rates[Int(index.row)].value?.rounded(toDecimalPlaces: 2) ?? 0.0
+        return String(value)
     }
-    func numberOfItemsInSection(section: Int) -> Int{
-        return self.rates?.count ?? 0
+    ///method used to get the total number of rows of the table view in LatestRatesVC
+    func numberOfRowsInSection(section: Int) -> Int{
+        return self.rates.count 
     }
-    
+    ///method used to get cell currency image  in LatestRatesVC
+    func getCurrencyImage(index:IndexPath) -> UIImage{
+        return UIImage(named: self.rates[Int(index.row)].currency ?? "EUR")!
+    }
+    ///method used to get the update state title in LatestRatesVC
+    func getLastUpdatedTimeTitle() -> String{
+        if self.date != "" {
+            return String("Last updated: \(self.date)")
+        }else{
+            return "Fetching data ..."
+        }
+    }
+    ///method used to get the view title for the chosen base currency in LatestRatesVC
+    func getViewTitle() -> String{
+        return String("Lates Rates for: \(SharedSettings.shared.baseCurrency)")
+    }
+    ///method used for creating a timer to start fetching data again at the chosen refresh time
+    private func refreshLatestCurrencies(){
+        self.invalidateTimer()
+        let refreshInterval =  Double(SharedSettings.shared.refreshTime) ?? 15.0
+        self.refreshTimer = Timer.scheduledTimer(timeInterval: refreshInterval, target: self, selector: #selector(getLatestRatesData), userInfo: nil, repeats: false)
+        
+    }
+    ///method used to invalidate the existing timer
+    func invalidateTimer(){
+        self.refreshTimer?.invalidate()
+    }
 }

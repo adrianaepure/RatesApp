@@ -8,41 +8,42 @@
 
 import UIKit
 
-struct APIPaths {
-    static let latestPath = URL(string: "https://api.exchangeratesapi.io/latest")
-    static let historyPath = URL(string: "https://api.exchangeratesapi.io/history")
-}
-class RatesClient: NSObject {
+public class RatesClient: NSObject {
     static let shared = RatesClient()
     
 }
 extension RatesClient{
-    func fetchLatestRates(for base: Currency, completion:@escaping (_ rates:LatestRateModel?) -> ()){
-        //        fetch data
-        //call the completion block
+    ///fetch latest rates data and call the completion block
+    func fetchLatestRates(completion:@escaping (_ result:LatestRateModel?, _ error: NSError?) -> ()){
         let service = WebServiceManager()
-        let parameters = ["base":"EUR", "symbols":"USD,RON,BGN"];
-        service.fetchData(for: APIPaths.latestPath!, params: parameters) { (response: LatestRateModel?, error: Error?) in
+        let base = SharedSettings.shared.baseCurrency
+        let otherSymbolsString = base.getRemainingCurrenciesString()
+        let parameters = ["base":base.rawValue, "symbols":otherSymbolsString];
+        service.fetchData(for: Constants.APIPaths.latestPath!, params: parameters) { (response: LatestRateModel?, error: Error?) in
             if let data = response {
-                print("Rates Client", data)
-                completion(data)
+                completion(data, nil)
             }
-            if let err = error {
-                debugPrint(err)
+            if error != nil {
+                completion(nil, error as NSError?)
             }
         }
     }
-    func fetchHistoryRates(for base: Currency, completion:@escaping (_ rates:HistoryRates?) -> ()){
+     ///fetch history rates data and call the completion block
+    func fetchHistoryRates(completion:@escaping (_ result:HistoryRates?, _ error: NSError?) -> ()){
         let service = WebServiceManager()
-        let parameters = ["base":"EUR", "start_at":"2018-01-01", "end_at":"2018-01-10", "symbols":"USD,RON,BGN"];
-        service.fetchData(for: APIPaths.historyPath!, params: parameters) { (response: HistoryRates?, error: Error?) in
+        let base = SharedSettings.shared.baseCurrency
+        let otherSymbolsString = base.getRemainingCurrenciesString()
+        let endAt = Date().customMediumDateFormatter()
+        let startAt = Calendar.current.date(byAdding: .day, value: -10, to: Date())!.customMediumDateFormatter()
+        let parameters = ["base":base, "start_at":startAt!, "end_at":endAt!, "symbols":otherSymbolsString] as [String : Any];
+        service.fetchData(for: Constants.APIPaths.historyPath!, params: parameters) { (response: HistoryRates?, error: Error?) in
             if let data = response {
-                print("Rates Client", data)
-                completion(data)
+                completion(data, nil)
             }
-            if let err = error {
-                debugPrint(err)
+            if error != nil {
+                completion(nil, error as NSError?)
             }
         }
     }
 }
+
