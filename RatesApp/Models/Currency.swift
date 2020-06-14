@@ -8,9 +8,21 @@
 
 import Foundation
 
-public enum Currency: String, Codable {
+public enum Currency: String, Codable, CaseIterable {
     case EUR
     case RON
     case BGN
     case USD
+//    func getName() -> String {
+//        switch self {
+//        case .EUR:
+//            return "Euro"
+//        case .USD:
+//            return "US Dollar"
+//        case .BGN:
+//            return "Bulgarian Leva"
+//        case .RON:
+//            return "Romanian Leu"
+//        }
+//    }
 }

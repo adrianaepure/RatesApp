@@ -26,7 +26,8 @@ public protocol WebServiceManagerProtocol {
 
 public class WebServiceManager{
     func fetchData<T: Codable>(for url: URL, params: Parameters, completionHandler: @escaping (T?, Error?) -> Void){
-        AF.request(url, parameters: params).validate()
+        print("url: ", url)
+        AF.request(url, parameters: params)
             .responseDecodable(of: T.self) { (response) in
                 
                  if response.error != nil {
@@ -34,7 +35,6 @@ public class WebServiceManager{
                     completionHandler(nil, response.error)
                 }else{
                     if let parsedJSON = response.value {
-                        print("Parsed JSON", parsedJSON)
                         completionHandler((parsedJSON), nil)
                     }
                 }

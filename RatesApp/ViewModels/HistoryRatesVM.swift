@@ -36,8 +36,8 @@ extension HistoryRatesVM {
                 
             }
             self.rates = result
-            print("Historical Rates for USD", self.getHistoryRates(for: "USD")!)
-            print("Historical Rates for RON", self.getHistoryRates(for: "RON")!)
+//            print("Historical Rates for USD", self.getHistoryRates(for: "USD")!)
+//            print("Historical Rates for RON", self.getHistoryRates(for: "RON")!)
             
         }
     }

@@ -13,41 +13,24 @@
 		3A4B199F2494C41800C04289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B199D2494C41800C04289 /* Main.storyboard */; };
 		3A4B19A12494C41D00C04289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B19A02494C41D00C04289 /* Assets.xcassets */; };
 		3A4B19A42494C41D00C04289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B19A22494C41D00C04289 /* LaunchScreen.storyboard */; };
-		3A4B19AF2494C41D00C04289 /* RatesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19AE2494C41D00C04289 /* RatesAppTests.swift */; };
-		3A4B19BA2494C41D00C04289 /* RatesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19B92494C41D00C04289 /* RatesAppUITests.swift */; };
 		3A634B322494CB5A00E9E9C0 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B312494CB5A00E9E9C0 /* RateModel.swift */; };
 		3A634B342494CB6E00E9E9C0 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B332494CB6E00E9E9C0 /* Currency.swift */; };
 		3A634B362494CF9800E9E9C0 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B352494CF9800E9E9C0 /* WebServiceManager.swift */; };
 		3A634B382494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */; };
-		3A634B392494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */; };
-		3A634B3A2494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */; };
 		3A634B3C2494D7C100E9E9C0 /* RatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */; };
-		3A634B3D2494D7C100E9E9C0 /* RatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */; };
-		3A634B3E2494D7C100E9E9C0 /* RatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */; };
 		3A634B412494F73800E9E9C0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B402494F73800E9E9C0 /* DoubleExtension.swift */; };
-		3A634B422494F73800E9E9C0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B402494F73800E9E9C0 /* DoubleExtension.swift */; };
-		3A634B432494F73800E9E9C0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B402494F73800E9E9C0 /* DoubleExtension.swift */; };
 		3A634B452494F78900E9E9C0 /* StringToDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */; };
-		3A634B462494F78900E9E9C0 /* StringToDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */; };
-		3A634B472494F78900E9E9C0 /* StringToDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */; };
 		3A634B4D2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */; };
-		3A634B4E2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */; };
-		3A634B4F2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */; };
 		3A634B51249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */; };
-		3A634B52249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */; };
-		3A634B53249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */; };
+		3A634B61249571FC00E9E9C0 /* RatesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B60249571FC00E9E9C0 /* RatesAppTests.swift */; };
+		3A634B692496316700E9E9C0 /* LatestRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B682496316700E9E9C0 /* LatestRateCell.swift */; };
+		3A634B6D249656C700E9E9C0 /* BaseCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B6C249656C700E9E9C0 /* BaseCurrencyCell.swift */; };
+		3A634B6F249667EB00E9E9C0 /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B6E249667EB00E9E9C0 /* CustomDateFormatter.swift */; };
 		AC16705C4AE422E10D2BD4E9 /* Pods_RatesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D21E2621946B099A72E38C8 /* Pods_RatesApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3A4B19AB2494C41D00C04289 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A4B198C2494C41700C04289 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A4B19932494C41700C04289;
-			remoteInfo = RatesApp;
-		};
-		3A4B19B62494C41D00C04289 /* PBXContainerItemProxy */ = {
+		3A634B63249571FC00E9E9C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3A4B198C2494C41700C04289 /* Project object */;
 			proxyType = 1;
@@ -66,12 +49,6 @@
 		3A4B19A02494C41D00C04289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4B19A32494C41D00C04289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4B19A52494C41D00C04289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A4B19AA2494C41D00C04289 /* RatesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A4B19AE2494C41D00C04289 /* RatesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAppTests.swift; sourceTree = "<group>"; };
-		3A4B19B02494C41D00C04289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A4B19B52494C41D00C04289 /* RatesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A4B19B92494C41D00C04289 /* RatesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAppUITests.swift; sourceTree = "<group>"; };
-		3A4B19BB2494C41D00C04289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A634B312494CB5A00E9E9C0 /* RateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
 		3A634B332494CB6E00E9E9C0 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		3A634B352494CF9800E9E9C0 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
@@ -81,6 +58,12 @@
 		3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateExtension.swift; sourceTree = "<group>"; };
 		3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesVC.swift; sourceTree = "<group>"; };
 		3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesVM.swift; sourceTree = "<group>"; };
+		3A634B5E249571FC00E9E9C0 /* RatesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A634B60249571FC00E9E9C0 /* RatesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAppTests.swift; sourceTree = "<group>"; };
+		3A634B62249571FC00E9E9C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A634B682496316700E9E9C0 /* LatestRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRateCell.swift; sourceTree = "<group>"; };
+		3A634B6C249656C700E9E9C0 /* BaseCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCurrencyCell.swift; sourceTree = "<group>"; };
+		3A634B6E249667EB00E9E9C0 /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
 		3D21E2621946B099A72E38C8 /* Pods_RatesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC941D96CCABFAABA2F0EB57 /* Pods-RatesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesApp.release.xcconfig"; path = "Target Support Files/Pods-RatesApp/Pods-RatesApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,14 +77,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A4B19A72494C41D00C04289 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A4B19B22494C41D00C04289 /* Frameworks */ = {
+		3A634B5B249571FC00E9E9C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,8 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4B19962494C41700C04289 /* RatesApp */,
-				3A4B19AD2494C41D00C04289 /* RatesAppTests */,
-				3A4B19B82494C41D00C04289 /* RatesAppUITests */,
+				3A634B5F249571FC00E9E9C0 /* RatesAppTests */,
 				3A4B19952494C41700C04289 /* Products */,
 				8460D8F96ABD9BDE881E7002 /* Pods */,
 				DFEDE13D100DADF1AF795C88 /* Frameworks */,
@@ -127,8 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4B19942494C41700C04289 /* RatesApp.app */,
-				3A4B19AA2494C41D00C04289 /* RatesAppTests.xctest */,
-				3A4B19B52494C41D00C04289 /* RatesAppUITests.xctest */,
+				3A634B5E249571FC00E9E9C0 /* RatesAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,31 +117,11 @@
 				3A634B2C2494CAF800E9E9C0 /* WebService */,
 				3A4B19972494C41700C04289 /* AppDelegate.swift */,
 				3A4B19992494C41700C04289 /* SceneDelegate.swift */,
-				3A4B199D2494C41800C04289 /* Main.storyboard */,
 				3A4B19A02494C41D00C04289 /* Assets.xcassets */,
-				3A4B19A22494C41D00C04289 /* LaunchScreen.storyboard */,
 				3A4B19A52494C41D00C04289 /* Info.plist */,
 				3A634B3F2494F71800E9E9C0 /* Extensions */,
 			);
 			path = RatesApp;
-			sourceTree = "<group>";
-		};
-		3A4B19AD2494C41D00C04289 /* RatesAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				3A4B19AE2494C41D00C04289 /* RatesAppTests.swift */,
-				3A4B19B02494C41D00C04289 /* Info.plist */,
-			);
-			path = RatesAppTests;
-			sourceTree = "<group>";
-		};
-		3A4B19B82494C41D00C04289 /* RatesAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3A4B19B92494C41D00C04289 /* RatesAppUITests.swift */,
-				3A4B19BB2494C41D00C04289 /* Info.plist */,
-			);
-			path = RatesAppUITests;
 			sourceTree = "<group>";
 		};
 		3A634B2C2494CAF800E9E9C0 /* WebService */ = {
@@ -209,6 +163,10 @@
 		3A634B302494CB2000E9E9C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A4B199D2494C41800C04289 /* Main.storyboard */,
+				3A634B682496316700E9E9C0 /* LatestRateCell.swift */,
+				3A634B6C249656C700E9E9C0 /* BaseCurrencyCell.swift */,
+				3A4B19A22494C41D00C04289 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,8 +176,18 @@
 			children = (
 				3A634B402494F73800E9E9C0 /* DoubleExtension.swift */,
 				3A634B442494F78900E9E9C0 /* StringToDateExtension.swift */,
+				3A634B6E249667EB00E9E9C0 /* CustomDateFormatter.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3A634B5F249571FC00E9E9C0 /* RatesAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A634B60249571FC00E9E9C0 /* RatesAppTests.swift */,
+				3A634B62249571FC00E9E9C0 /* Info.plist */,
+			);
+			path = RatesAppTests;
 			sourceTree = "<group>";
 		};
 		8460D8F96ABD9BDE881E7002 /* Pods */ = {
@@ -261,41 +229,23 @@
 			productReference = 3A4B19942494C41700C04289 /* RatesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A4B19A92494C41D00C04289 /* RatesAppTests */ = {
+		3A634B5D249571FC00E9E9C0 /* RatesAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A4B19C12494C41D00C04289 /* Build configuration list for PBXNativeTarget "RatesAppTests" */;
+			buildConfigurationList = 3A634B65249571FC00E9E9C0 /* Build configuration list for PBXNativeTarget "RatesAppTests" */;
 			buildPhases = (
-				3A4B19A62494C41D00C04289 /* Sources */,
-				3A4B19A72494C41D00C04289 /* Frameworks */,
-				3A4B19A82494C41D00C04289 /* Resources */,
+				3A634B5A249571FC00E9E9C0 /* Sources */,
+				3A634B5B249571FC00E9E9C0 /* Frameworks */,
+				3A634B5C249571FC00E9E9C0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3A4B19AC2494C41D00C04289 /* PBXTargetDependency */,
+				3A634B64249571FC00E9E9C0 /* PBXTargetDependency */,
 			);
 			name = RatesAppTests;
 			productName = RatesAppTests;
-			productReference = 3A4B19AA2494C41D00C04289 /* RatesAppTests.xctest */;
+			productReference = 3A634B5E249571FC00E9E9C0 /* RatesAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3A4B19B42494C41D00C04289 /* RatesAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A4B19C42494C41D00C04289 /* Build configuration list for PBXNativeTarget "RatesAppUITests" */;
-			buildPhases = (
-				3A4B19B12494C41D00C04289 /* Sources */,
-				3A4B19B22494C41D00C04289 /* Frameworks */,
-				3A4B19B32494C41D00C04289 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A4B19B72494C41D00C04289 /* PBXTargetDependency */,
-			);
-			name = RatesAppUITests;
-			productName = RatesAppUITests;
-			productReference = 3A4B19B52494C41D00C04289 /* RatesAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -310,11 +260,7 @@
 					3A4B19932494C41700C04289 = {
 						CreatedOnToolsVersion = 11.5;
 					};
-					3A4B19A92494C41D00C04289 = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 3A4B19932494C41700C04289;
-					};
-					3A4B19B42494C41D00C04289 = {
+					3A634B5D249571FC00E9E9C0 = {
 						CreatedOnToolsVersion = 11.5;
 						TestTargetID = 3A4B19932494C41700C04289;
 					};
@@ -334,8 +280,7 @@
 			projectRoot = "";
 			targets = (
 				3A4B19932494C41700C04289 /* RatesApp */,
-				3A4B19A92494C41D00C04289 /* RatesAppTests */,
-				3A4B19B42494C41D00C04289 /* RatesAppUITests */,
+				3A634B5D249571FC00E9E9C0 /* RatesAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -351,14 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A4B19A82494C41D00C04289 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A4B19B32494C41D00C04289 /* Resources */ = {
+		3A634B5C249571FC00E9E9C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,6 +357,9 @@
 				3A634B382494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */,
 				3A634B51249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */,
 				3A634B4D2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */,
+				3A634B6F249667EB00E9E9C0 /* CustomDateFormatter.swift in Sources */,
+				3A634B6D249656C700E9E9C0 /* BaseCurrencyCell.swift in Sources */,
+				3A634B692496316700E9E9C0 /* LatestRateCell.swift in Sources */,
 				3A634B3C2494D7C100E9E9C0 /* RatesClient.swift in Sources */,
 				3A634B412494F73800E9E9C0 /* DoubleExtension.swift in Sources */,
 				3A634B342494CB6E00E9E9C0 /* Currency.swift in Sources */,
@@ -429,46 +370,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A4B19A62494C41D00C04289 /* Sources */ = {
+		3A634B5A249571FC00E9E9C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A634B422494F73800E9E9C0 /* DoubleExtension.swift in Sources */,
-				3A634B462494F78900E9E9C0 /* StringToDateExtension.swift in Sources */,
-				3A4B19AF2494C41D00C04289 /* RatesAppTests.swift in Sources */,
-				3A634B3D2494D7C100E9E9C0 /* RatesClient.swift in Sources */,
-				3A634B392494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */,
-				3A634B52249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */,
-				3A634B4E2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A4B19B12494C41D00C04289 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A634B432494F73800E9E9C0 /* DoubleExtension.swift in Sources */,
-				3A634B472494F78900E9E9C0 /* StringToDateExtension.swift in Sources */,
-				3A4B19BA2494C41D00C04289 /* RatesAppUITests.swift in Sources */,
-				3A634B3E2494D7C100E9E9C0 /* RatesClient.swift in Sources */,
-				3A634B3A2494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */,
-				3A634B53249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */,
-				3A634B4F2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */,
+				3A634B61249571FC00E9E9C0 /* RatesAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3A4B19AC2494C41D00C04289 /* PBXTargetDependency */ = {
+		3A634B64249571FC00E9E9C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3A4B19932494C41700C04289 /* RatesApp */;
-			targetProxy = 3A4B19AB2494C41D00C04289 /* PBXContainerItemProxy */;
-		};
-		3A4B19B72494C41D00C04289 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A4B19932494C41700C04289 /* RatesApp */;
-			targetProxy = 3A4B19B62494C41D00C04289 /* PBXContainerItemProxy */;
+			targetProxy = 3A634B63249571FC00E9E9C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -644,15 +560,13 @@
 			};
 			name = Release;
 		};
-		3A4B19C22494C41D00C04289 /* Debug */ = {
+		3A634B66249571FC00E9E9C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQC3YUGDLT;
 				INFOPLIST_FILE = RatesAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -666,15 +580,13 @@
 			};
 			name = Debug;
 		};
-		3A4B19C32494C41D00C04289 /* Release */ = {
+		3A634B67249571FC00E9E9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQC3YUGDLT;
 				INFOPLIST_FILE = RatesAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -685,46 +597,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RatesApp.app/RatesApp";
-			};
-			name = Release;
-		};
-		3A4B19C52494C41D00C04289 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AQC3YUGDLT;
-				INFOPLIST_FILE = RatesAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = adri.RatesAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RatesApp;
-			};
-			name = Debug;
-		};
-		3A4B19C62494C41D00C04289 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AQC3YUGDLT;
-				INFOPLIST_FILE = RatesAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = adri.RatesAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RatesApp;
 			};
 			name = Release;
 		};
@@ -749,20 +621,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A4B19C12494C41D00C04289 /* Build configuration list for PBXNativeTarget "RatesAppTests" */ = {
+		3A634B65249571FC00E9E9C0 /* Build configuration list for PBXNativeTarget "RatesAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A4B19C22494C41D00C04289 /* Debug */,
-				3A4B19C32494C41D00C04289 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A4B19C42494C41D00C04289 /* Build configuration list for PBXNativeTarget "RatesAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A4B19C52494C41D00C04289 /* Debug */,
-				3A4B19C62494C41D00C04289 /* Release */,
+				3A634B66249571FC00E9E9C0 /* Debug */,
+				3A634B67249571FC00E9E9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

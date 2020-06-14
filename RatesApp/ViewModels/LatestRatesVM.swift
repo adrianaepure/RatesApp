@@ -7,44 +7,71 @@
 //
 
 import Foundation
+import UIKit
 
 //public protocol LatestRatesVMProtocol {
 //
 //    func getLatestRates(completion: () -> ())
 //}
 
-class LatestRatesVM  {
+protocol LatestRatesVMDelegate {
+    func didFinishLoading()
+}
+
+public class LatestRatesVM  {
     var baseCurrency: Currency
-    var date: Date!
+    var refreshRate: Double
+    var date: String?
     var rates: Array<RateModel>?
-    init(baseCurrency: Currency){
+    var delegate:  LatestRatesVMDelegate?
+    var refreshTimer: Timer?
+    init(baseCurrency: Currency, refreshRate: Double){
         self.baseCurrency = baseCurrency
+        self.refreshRate = refreshRate
     }
     
     deinit {
         print("DEINIT LATEST Rates VM")
+        self.refreshTimer?.invalidate()
     }
 }
 extension LatestRatesVM {
-    func getLatestRatesData(completion: () -> ()) {
-        RatesClient.shared.fetchLatestRates(for: Currency.EUR) { (response) in
+    @objc func getLatestRatesData() {
+        RatesClient.shared.fetchLatestRates(for:baseCurrency) { (response) in
             guard let data = response else {return}
-            self.date = data.date.convertStringToDate()
-            let indexPath = IndexPath(row: 0, section: 0)
-            self.rates = data.rates.compactMap {RateModel(currency: $0, value: $1)}
-            print(self.currencyForItemAtIndexPath(index: indexPath))
-            print(self.valueForItemAtIndexPath(index: indexPath))
+            self.date = Date().customDateFormatter()
+            self.rates = data.rates.sorted(by:{ $0.key < $1.key}).compactMap {RateModel(currency: $0, value: $1)}
+            self.delegate?.didFinishLoading()
+            self.refreshLatestCurrencies(after:self.refreshRate)
             
         }
     }
     func currencyForItemAtIndexPath(index:IndexPath) -> String{
         return self.rates?[Int(index.row)].currency ?? ""
     }
-    func valueForItemAtIndexPath(index:IndexPath) -> Double{
-        return self.rates?[Int(index.row)].value?.rounded(toDecimalPlaces: 2) ?? 0.0
+    func valueForItemAtIndexPath(index:IndexPath) -> String{
+        let value = self.rates?[Int(index.row)].value?.rounded(toDecimalPlaces: 2) ?? 0.0
+        return String(value)
     }
-    func numberOfItemsInSection(section: Int) -> Int{
+    func numberOfRowsInSection(section: Int) -> Int{
         return self.rates?.count ?? 0
     }
-    
+    func getCurrencyImage(index:IndexPath) -> UIImage{
+        return UIImage(named: self.rates?[Int(index.row)].currency ?? "EUR")!
+    }
+    func getLastUpdatedTimeTitle() -> String{
+        if self.date != nil {
+            return String("Last updated: \(self.date!)")
+        }else{
+            return "Fetching data ..."
+        }
+    }
+    func getViewTitle() -> String{
+        return String("Lates Rates for: \(self.baseCurrency)")
+    }
+    func refreshLatestCurrencies(after interval:Double){
+        self.refreshTimer?.invalidate()
+        self.refreshTimer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(getLatestRatesData), userInfo: nil, repeats: false)
+        
+    }
 }
