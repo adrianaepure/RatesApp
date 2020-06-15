@@ -9,40 +9,25 @@
 import Foundation
 import UIKit
 
-//public protocol LatestRatesVMProtocol {
-//
-//    func getLatestRates(completion: () -> ())
-//}
-
 protocol LatestRatesVMDelegate {
     func didFinishLoading()
 }
 
 public class LatestRatesVM  {
-    var baseCurrency: Currency
-    var refreshRate: Double
     var date: String?
     var rates: Array<RateModel>?
     var delegate:  LatestRatesVMDelegate?
     var refreshTimer: Timer?
-    init(baseCurrency: Currency, refreshRate: Double){
-        self.baseCurrency = baseCurrency
-        self.refreshRate = refreshRate
-    }
-    
-    deinit {
-        print("DEINIT LATEST Rates VM")
-        self.refreshTimer?.invalidate()
-    }
+    init(){}
 }
 extension LatestRatesVM {
     @objc func getLatestRatesData() {
-        RatesClient.shared.fetchLatestRates(for:baseCurrency) { (response) in
+        RatesClient.shared.fetchLatestRates() { (response) in
             guard let data = response else {return}
             self.date = Date().customDateFormatter()
             self.rates = data.rates.sorted(by:{ $0.key < $1.key}).compactMap {RateModel(currency: $0, value: $1)}
             self.delegate?.didFinishLoading()
-            self.refreshLatestCurrencies(after:self.refreshRate)
+            self.refreshLatestCurrencies()
             
         }
     }
@@ -67,11 +52,16 @@ extension LatestRatesVM {
         }
     }
     func getViewTitle() -> String{
-        return String("Lates Rates for: \(self.baseCurrency)")
+        return String("Lates Rates for: \(SharedSettings.shared.baseCurrency)")
     }
-    func refreshLatestCurrencies(after interval:Double){
-        self.refreshTimer?.invalidate()
-        self.refreshTimer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(getLatestRatesData), userInfo: nil, repeats: false)
+    func refreshLatestCurrencies(){
+        self.invalidateTimer()
+        let refreshInterval =  Double(SharedSettings.shared.refreshTime) ?? 15.0
+        self.refreshTimer = Timer.scheduledTimer(timeInterval: refreshInterval, target: self, selector: #selector(getLatestRatesData), userInfo: nil, repeats: false)
         
+    }
+    func invalidateTimer(){
+        print("invalidate timer")
+        self.refreshTimer?.invalidate()
     }
 }

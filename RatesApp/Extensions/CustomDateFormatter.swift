@@ -19,4 +19,12 @@ extension Date {
         // get the date time String from the date object
         return dateFormatter.string(from: self)
     }
+    func customShortDateFormatter() -> String? {
+        // initialize the date formatter and set the style
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+
+        // get the date time String from the date object
+        return dateFormatter.string(from: self)
+    }
 }

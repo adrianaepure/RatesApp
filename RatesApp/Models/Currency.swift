@@ -13,16 +13,25 @@ public enum Currency: String, Codable, CaseIterable {
     case RON
     case BGN
     case USD
-//    func getName() -> String {
-//        switch self {
-//        case .EUR:
-//            return "Euro"
-//        case .USD:
-//            return "US Dollar"
-//        case .BGN:
-//            return "Bulgarian Leva"
-//        case .RON:
-//            return "Romanian Leu"
-//        }
-//    }
+    func displayName() -> String {
+        switch self {
+        case .EUR:
+            return "Euro"
+        case .USD:
+            return "US Dollar"
+        case .BGN:
+            return "Bulgarian Leva"
+        case .RON:
+            return "Romanian Leu"
+        }
+    }
+    func getRemainingCurrenciesString() -> String {
+           var curenciesArray = Currency.allCases.map{$0.rawValue}
+           curenciesArray = curenciesArray.filter{$0 != self.rawValue}
+           return curenciesArray.joined(separator: ",")
+       }
+    func getRemainingCurrenciesArray() -> Array<Currency> {
+           let curenciesArray = Currency.allCases.map{$0}
+           return curenciesArray.filter{$0 != self}
+       }
 }

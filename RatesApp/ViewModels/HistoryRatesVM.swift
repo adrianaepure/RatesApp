@@ -8,9 +8,16 @@
 
 import Foundation
 
+protocol HistoryRatesVMDelegate {
+    func didFinishLoading()
+}
+
+
+
 class HistoryRatesVM {
     var baseCurrency: Currency
     var rates: [String: [ValueByDate]]?
+    var delegate:  HistoryRatesVMDelegate?
     init(baseCurrency: Currency){
         self.baseCurrency = baseCurrency
     }
@@ -19,7 +26,7 @@ class HistoryRatesVM {
     }
 }
 extension HistoryRatesVM {
-    func getHistoryRatesData(completion: () -> ()) {
+    @objc func getHistoryRatesData() {
         RatesClient.shared.fetchHistoryRates(for: Currency.EUR) { (rates) in
             guard let response = rates else {return}
             let flattenedRates = response.rates.compactMap{$0}
@@ -36,12 +43,13 @@ extension HistoryRatesVM {
                 
             }
             self.rates = result
-//            print("Historical Rates for USD", self.getHistoryRates(for: "USD")!)
-//            print("Historical Rates for RON", self.getHistoryRates(for: "RON")!)
+            self.delegate?.didFinishLoading()
             
         }
     }
-    func getHistoryRates(for currency: String) -> [ValueByDate]?{
-        return self.rates?[currency] ?? nil
+    func getHistoryRates(for currency: String) -> ([String], [Double]){
+        let dates = self.rates?[currency]?.compactMap{$0.date.customShortDateFormatter()}
+        let values = self.rates?[currency]?.compactMap{$0.value}
+        return (dates!,values!)
     }
 }
