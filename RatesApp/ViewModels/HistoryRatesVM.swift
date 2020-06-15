@@ -21,28 +21,28 @@ class HistoryRatesVM {
     init(baseCurrency: Currency){
         self.baseCurrency = baseCurrency
     }
-    deinit {
-        print("DEINIT History Rates VM")
-    }
+    
 }
 extension HistoryRatesVM {
     @objc func getHistoryRatesData() {
-        RatesClient.shared.fetchHistoryRates(for: Currency.EUR) { (rates) in
-            guard let response = rates else {return}
-            let flattenedRates = response.rates.compactMap{$0}
-            var result = [String:[ValueByDate]]()
-            let allCurrenciesList = Array(Set(response.rates.values.flatMap({$0.keys}))).sorted(by: {$0 < $1})
+        RatesClient.shared.fetchHistoryRates() { (result, error) in
+            guard let data = result else {return}
+            let flattenedRates = data.rates.compactMap{$0}
+            var ratesResult = [String:[ValueByDate]]()
+            let allCurrenciesList = Array(Set(data.rates.values.flatMap({$0.keys}))).sorted(by: {$0 < $1})
             for currency in allCurrenciesList {
                 let newVal = flattenedRates.reduce([ValueByDate](), { res, item in
                     var arr = res
                     arr.append(ValueByDate(date: item.key.convertStringToDate()!, value: (item.value[currency]?.rounded(toDecimalPlaces: 2))!))
+                    arr.sort(){$0.date < $1.date}
                     return arr
                     
                 })
-                result.updateValue(newVal, forKey: currency)
+                
+                ratesResult.updateValue(newVal, forKey: currency)
                 
             }
-            self.rates = result
+            self.rates = ratesResult
             self.delegate?.didFinishLoading()
             
         }

@@ -19,7 +19,6 @@ class LatestRatesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("init latest vm")
         self.vm.delegate = self;
     }
     override func viewWillAppear(_ animated: Bool) {        
@@ -61,7 +60,6 @@ extension LatestRatesVC {
 //MARK: - Table View Delegate
 extension LatestRatesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("section: ", self.vm.numberOfRowsInSection(section: section))
         return self.vm.numberOfRowsInSection(section: section)
     }
     
@@ -69,8 +67,9 @@ extension LatestRatesVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LatestRateCell") as! LatestRateCell
         cell.currencyTitleLbl.text = self.vm.currencyForItemAtIndexPath(index: indexPath)
         cell.rateValueLbl.text = self.vm.valueForItemAtIndexPath(index: indexPath)
-        cell.currencyImg.image = self.vm.getCurrencyImage(index: indexPath)
-        print("cell stuff: ", cell.currencyTitleLbl.text!, cell.rateValueLbl.text!)
+        let image = self.vm.getCurrencyImage(index: indexPath)
+        cell.currencyImg.image = image
+        cell.currencyImg.maskCircle(anyImage: image)
         return cell
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

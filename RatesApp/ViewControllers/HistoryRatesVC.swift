@@ -81,10 +81,8 @@ class HistoryRatesVC: UIViewController{
         for currency in  SharedSettings.shared.baseCurrency.getRemainingCurrenciesArray() {
             let currencyString = currency.rawValue
             let points = self.vm.getHistoryRates(for: currencyString)
-            print("Chart points", points)
             let chart = getChartForCurrency(currency: self.vm.baseCurrency.rawValue)
             chart.data = getChartData(points, label: currencyString)
-//            chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: points.1)
             chart.data?.setDrawValues(false)
             chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: points.0)
             stackView.addArrangedSubview(chart)
@@ -149,7 +147,6 @@ class HistoryRatesVC: UIViewController{
 //MARK: - View Model Delegate
 extension HistoryRatesVC: HistoryRatesVMDelegate{
     func didFinishLoading() {
-        print("Finished loading history data")
         self.updateCharts()
     }
     

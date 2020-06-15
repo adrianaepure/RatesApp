@@ -17,7 +17,7 @@ public class RatesClient: NSObject {
     
 }
 extension RatesClient{
-    func fetchLatestRates(completion:@escaping (_ rates:LatestRateModel?) -> ()){
+    func fetchLatestRates(completion:@escaping (_ result:LatestRateModel?, _ error: NSError?) -> ()){
         //        fetch data
         //call the completion block
         let service = WebServiceManager()
@@ -26,23 +26,26 @@ extension RatesClient{
         let parameters = ["base":base.rawValue, "symbols":otherSymbolsString];
         service.fetchData(for: Constants.APIPaths.latestPath!, params: parameters) { (response: LatestRateModel?, error: Error?) in
             if let data = response {
-                completion(data)
+                completion(data, nil)
             }
-            if let err = error {
-                debugPrint(err)
+            if error != nil {
+                completion(nil, error as NSError?)
             }
         }
     }
-    func fetchHistoryRates(for base: Currency, completion:@escaping (_ rates:HistoryRates?) -> ()){
+    func fetchHistoryRates(completion:@escaping (_ result:HistoryRates?, _ error: NSError?) -> ()){
         let service = WebServiceManager()
+        let base = SharedSettings.shared.baseCurrency
         let otherSymbolsString = base.getRemainingCurrenciesString()
-        let parameters = ["base":"EUR", "start_at":"2018-01-01", "end_at":"2018-01-10", "symbols":otherSymbolsString];
+        let endAt = Date().customMediumDateFormatter()
+        let startAt = Calendar.current.date(byAdding: .day, value: -10, to: Date())!.customMediumDateFormatter()
+        let parameters = ["base":base, "start_at":startAt!, "end_at":endAt!, "symbols":otherSymbolsString] as [String : Any];
         service.fetchData(for: Constants.APIPaths.historyPath!, params: parameters) { (response: HistoryRates?, error: Error?) in
             if let data = response {
-                completion(data)
+                completion(data, nil)
             }
-            if let err = error {
-                debugPrint(err)
+            if error != nil {
+                completion(nil, error as NSError?)
             }
         }
     }

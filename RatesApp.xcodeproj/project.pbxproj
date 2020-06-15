@@ -12,6 +12,8 @@
 		3A364D7C24976D4C00DB321F /* BaseCurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D7B24976D4B00DB321F /* BaseCurrencyVC.swift */; };
 		3A364D7E24976D5E00DB321F /* RefreshIntervalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D7D24976D5E00DB321F /* RefreshIntervalVC.swift */; };
 		3A364D8224977BD900DB321F /* SharedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D8124977BD900DB321F /* SharedSettings.swift */; };
+		3A364D842497B52D00DB321F /* LatestRatesVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D832497B52D00DB321F /* LatestRatesVMTest.swift */; };
+		3A364D862497BB0900DB321F /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D852497BB0900DB321F /* UIImageViewExtension.swift */; };
 		3A4B19982494C41700C04289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19972494C41700C04289 /* AppDelegate.swift */; };
 		3A4B199A2494C41700C04289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19992494C41700C04289 /* SceneDelegate.swift */; };
 		3A4B199C2494C41800C04289 /* LatestRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B199B2494C41800C04289 /* LatestRatesVC.swift */; };
@@ -24,13 +26,13 @@
 		3A634B382494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */; };
 		3A634B3C2494D7C100E9E9C0 /* RatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */; };
 		3A634B412494F73800E9E9C0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B402494F73800E9E9C0 /* DoubleExtension.swift */; };
-		3A634B452494F78900E9E9C0 /* CustomStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* CustomStringFormatter.swift */; };
+		3A634B452494F78900E9E9C0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B442494F78900E9E9C0 /* StringExtension.swift */; };
 		3A634B4D2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */; };
 		3A634B51249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */; };
-		3A634B61249571FC00E9E9C0 /* RatesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B60249571FC00E9E9C0 /* RatesAppTests.swift */; };
+		3A634B61249571FC00E9E9C0 /* RatesClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B60249571FC00E9E9C0 /* RatesClientTest.swift */; };
 		3A634B692496316700E9E9C0 /* LatestRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B682496316700E9E9C0 /* LatestRateCell.swift */; };
 		3A634B6D249656C700E9E9C0 /* BaseCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B6C249656C700E9E9C0 /* BaseCurrencyCell.swift */; };
-		3A634B6F249667EB00E9E9C0 /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B6E249667EB00E9E9C0 /* CustomDateFormatter.swift */; };
+		3A634B6F249667EB00E9E9C0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B6E249667EB00E9E9C0 /* DateExtension.swift */; };
 		AC16705C4AE422E10D2BD4E9 /* Pods_RatesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D21E2621946B099A72E38C8 /* Pods_RatesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		3A364D7B24976D4B00DB321F /* BaseCurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCurrencyVC.swift; sourceTree = "<group>"; };
 		3A364D7D24976D5E00DB321F /* RefreshIntervalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshIntervalVC.swift; sourceTree = "<group>"; };
 		3A364D8124977BD900DB321F /* SharedSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSettings.swift; sourceTree = "<group>"; };
+		3A364D832497B52D00DB321F /* LatestRatesVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesVMTest.swift; sourceTree = "<group>"; };
+		3A364D852497BB0900DB321F /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		3A4B19942494C41700C04289 /* RatesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4B19972494C41700C04289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A4B19992494C41700C04289 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,15 +69,15 @@
 		3A634B372494D4B900E9E9C0 /* LatestRatesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesVM.swift; sourceTree = "<group>"; };
 		3A634B3B2494D7C100E9E9C0 /* RatesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesClient.swift; sourceTree = "<group>"; };
 		3A634B402494F73800E9E9C0 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
-		3A634B442494F78900E9E9C0 /* CustomStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringFormatter.swift; sourceTree = "<group>"; };
+		3A634B442494F78900E9E9C0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		3A634B4C2495075700E9E9C0 /* HistoryRatesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesVC.swift; sourceTree = "<group>"; };
 		3A634B50249507AB00E9E9C0 /* HistoryRatesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesVM.swift; sourceTree = "<group>"; };
 		3A634B5E249571FC00E9E9C0 /* RatesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A634B60249571FC00E9E9C0 /* RatesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAppTests.swift; sourceTree = "<group>"; };
+		3A634B60249571FC00E9E9C0 /* RatesClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesClientTest.swift; sourceTree = "<group>"; };
 		3A634B62249571FC00E9E9C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A634B682496316700E9E9C0 /* LatestRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRateCell.swift; sourceTree = "<group>"; };
 		3A634B6C249656C700E9E9C0 /* BaseCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCurrencyCell.swift; sourceTree = "<group>"; };
-		3A634B6E249667EB00E9E9C0 /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
+		3A634B6E249667EB00E9E9C0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		3D21E2621946B099A72E38C8 /* Pods_RatesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC941D96CCABFAABA2F0EB57 /* Pods-RatesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatesApp.release.xcconfig"; path = "Target Support Files/Pods-RatesApp/Pods-RatesApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,8 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				3A634B402494F73800E9E9C0 /* DoubleExtension.swift */,
-				3A634B442494F78900E9E9C0 /* CustomStringFormatter.swift */,
-				3A634B6E249667EB00E9E9C0 /* CustomDateFormatter.swift */,
+				3A634B442494F78900E9E9C0 /* StringExtension.swift */,
+				3A634B6E249667EB00E9E9C0 /* DateExtension.swift */,
+				3A364D852497BB0900DB321F /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,7 +212,8 @@
 		3A634B5F249571FC00E9E9C0 /* RatesAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A634B60249571FC00E9E9C0 /* RatesAppTests.swift */,
+				3A634B60249571FC00E9E9C0 /* RatesClientTest.swift */,
+				3A364D832497B52D00DB321F /* LatestRatesVMTest.swift */,
 				3A634B62249571FC00E9E9C0 /* Info.plist */,
 			);
 			path = RatesAppTests;
@@ -377,12 +383,13 @@
 			files = (
 				3A364D7A24975FD300DB321F /* SettingsVC.swift in Sources */,
 				3A4B199C2494C41800C04289 /* LatestRatesVC.swift in Sources */,
-				3A634B452494F78900E9E9C0 /* CustomStringFormatter.swift in Sources */,
+				3A634B452494F78900E9E9C0 /* StringExtension.swift in Sources */,
 				3A634B382494D4B900E9E9C0 /* LatestRatesVM.swift in Sources */,
 				3A634B51249507AB00E9E9C0 /* HistoryRatesVM.swift in Sources */,
 				3A634B4D2495075700E9E9C0 /* HistoryRatesVC.swift in Sources */,
 				3A364D7824974E4700DB321F /* Constants.swift in Sources */,
-				3A634B6F249667EB00E9E9C0 /* CustomDateFormatter.swift in Sources */,
+				3A634B6F249667EB00E9E9C0 /* DateExtension.swift in Sources */,
+				3A364D862497BB0900DB321F /* UIImageViewExtension.swift in Sources */,
 				3A634B6D249656C700E9E9C0 /* BaseCurrencyCell.swift in Sources */,
 				3A634B692496316700E9E9C0 /* LatestRateCell.swift in Sources */,
 				3A634B3C2494D7C100E9E9C0 /* RatesClient.swift in Sources */,
@@ -402,7 +409,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A634B61249571FC00E9E9C0 /* RatesAppTests.swift in Sources */,
+				3A634B61249571FC00E9E9C0 /* RatesClientTest.swift in Sources */,
+				3A364D842497B52D00DB321F /* LatestRatesVMTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

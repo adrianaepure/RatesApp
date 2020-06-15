@@ -22,8 +22,8 @@ public class LatestRatesVM  {
 }
 extension LatestRatesVM {
     @objc func getLatestRatesData() {
-        RatesClient.shared.fetchLatestRates() { (response) in
-            guard let data = response else {return}
+        RatesClient.shared.fetchLatestRates() { (result, error) in
+            guard let data = result else {return}
             self.date = Date().customDateFormatter()
             self.rates = data.rates.sorted(by:{ $0.key < $1.key}).compactMap {RateModel(currency: $0, value: $1)}
             self.delegate?.didFinishLoading()
@@ -61,7 +61,6 @@ extension LatestRatesVM {
         
     }
     func invalidateTimer(){
-        print("invalidate timer")
         self.refreshTimer?.invalidate()
     }
 }

@@ -31,7 +31,6 @@ public class WebServiceManager{
             .responseDecodable(of: T.self) { (response) in
                 
                  if response.error != nil {
-                    print(response.error!)
                     completionHandler(nil, response.error)
                 }else{
                     if let parsedJSON = response.value {

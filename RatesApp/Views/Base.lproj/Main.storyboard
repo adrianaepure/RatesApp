@@ -403,7 +403,7 @@
             </objects>
             <point key="canvasLocation" x="793" y="127"/>
         </scene>
-        <!--History RatesVC-->
+        <!--History Rates over past 10 days-->
         <scene sceneID="E7h-Gi-ULL">
             <objects>
                 <viewController id="czY-Sk-zh2" customClass="HistoryRatesVC" customModule="RatesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -413,7 +413,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7Yg-ax-f5g"/>
                     </view>
-                    <navigationItem key="navigationItem" id="z8Y-gF-FUt"/>
+                    <navigationItem key="navigationItem" title="History Rates over past 10 days" id="z8Y-gF-FUt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQS-jl-R8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
