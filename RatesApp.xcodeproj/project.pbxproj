@@ -22,6 +22,8 @@
 		3A4B199F2494C41800C04289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B199D2494C41800C04289 /* Main.storyboard */; };
 		3A4B19A12494C41D00C04289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B19A02494C41D00C04289 /* Assets.xcassets */; };
 		3A4B19A42494C41D00C04289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B19A22494C41D00C04289 /* LaunchScreen.storyboard */; };
+		3A54623A2498B51400C9C6C3 /* SharedDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5462392498B51400C9C6C3 /* SharedDataTest.swift */; };
+		3A54623C2498BA9000C9C6C3 /* HistoryRatesVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54623B2498BA9000C9C6C3 /* HistoryRatesVMTest.swift */; };
 		3A634B322494CB5A00E9E9C0 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B312494CB5A00E9E9C0 /* RateModel.swift */; };
 		3A634B342494CB6E00E9E9C0 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B332494CB6E00E9E9C0 /* Currency.swift */; };
 		3A634B362494CF9800E9E9C0 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A634B352494CF9800E9E9C0 /* WebServiceManager.swift */; };
@@ -67,6 +69,8 @@
 		3A4B19A02494C41D00C04289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4B19A32494C41D00C04289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4B19A52494C41D00C04289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5462392498B51400C9C6C3 /* SharedDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataTest.swift; sourceTree = "<group>"; };
+		3A54623B2498BA9000C9C6C3 /* HistoryRatesVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesVMTest.swift; sourceTree = "<group>"; };
 		3A634B312494CB5A00E9E9C0 /* RateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
 		3A634B332494CB6E00E9E9C0 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		3A634B352494CF9800E9E9C0 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 			children = (
 				3A634B60249571FC00E9E9C0 /* RatesClientTest.swift */,
 				3A364D832497B52D00DB321F /* LatestRatesVMTest.swift */,
+				3A54623B2498BA9000C9C6C3 /* HistoryRatesVMTest.swift */,
+				3A5462392498B51400C9C6C3 /* SharedDataTest.swift */,
 				3A634B62249571FC00E9E9C0 /* Info.plist */,
 			);
 			path = RatesAppTests;
@@ -417,8 +423,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A54623A2498B51400C9C6C3 /* SharedDataTest.swift in Sources */,
 				3A634B61249571FC00E9E9C0 /* RatesClientTest.swift in Sources */,
 				3A364D842497B52D00DB321F /* LatestRatesVMTest.swift in Sources */,
+				3A54623C2498BA9000C9C6C3 /* HistoryRatesVMTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,13 @@ import XCTest
 
 class RatesClientTest: XCTestCase {
     
-    func testFetchLatestRates() {
+    override class func setUp() {
+        super.setUp()
+        //change the base currency to RON
+        SharedSettings.shared.baseCurrency = .RON
+    }
+    
+    func testFetchLatestRatesForRON() {
       let ex = expectation(description: "Expecting a JSON data not nil")
 
       RatesClient.shared.fetchLatestRates{ (result, error) in
@@ -19,7 +25,7 @@ class RatesClientTest: XCTestCase {
         XCTAssertNil(error)
         XCTAssertNotNil(result)
         XCTAssertEqual(result?.rates.count, 3, "We should have loaded exactly 3 rates.")
-        XCTAssertEqual(result?.base, Currency.EUR, "Base is euro.")
+        XCTAssertEqual(result?.base, Currency.RON, "Base is RON.")
         ex.fulfill()
 
       }
@@ -30,11 +36,10 @@ class RatesClientTest: XCTestCase {
         }
       }
     }
-    func testFetchHistoryRates() {
+    func testFetchHistoryRatesForRON() {
       let ex = expectation(description: "Expecting a JSON data not nil")
 
       RatesClient.shared.fetchHistoryRates{ (result, error) in
-
         XCTAssertNil(error)
         XCTAssertNotNil(result)
         ex.fulfill()
@@ -46,5 +51,11 @@ class RatesClientTest: XCTestCase {
           XCTFail("error: \(error)")
         }
       }
+    }
+    
+    override class func tearDown() {
+        //Change base currency to EUR
+        SharedSettings.shared.baseCurrency = .EUR
+        super.tearDown()
     }
 }

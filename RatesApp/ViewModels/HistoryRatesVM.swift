@@ -16,12 +16,9 @@ protocol HistoryRatesVMDelegate {
 
 //MARK: - HistoryRatesVM class
 class HistoryRatesVM {
-    var baseCurrency: Currency
     var rates: [String: [ValueByDate]]?
     var delegate:  HistoryRatesVMDelegate?
-    init(baseCurrency: Currency){
-        self.baseCurrency = baseCurrency
-    }
+    init(){}
     
 }
 //MARK: - HistoryRatesVM methods

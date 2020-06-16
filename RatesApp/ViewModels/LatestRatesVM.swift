@@ -26,6 +26,7 @@ public class LatestRatesVM  {
 extension LatestRatesVM {
     ///fetch latest rates data and send an update when the request is finished
     @objc func getLatestRatesData() {
+        self.date = nil
         RatesClient.shared.fetchLatestRates() { (result, error) in
             guard let data = result else {return}
             self.date = Date().customDateFormatter()

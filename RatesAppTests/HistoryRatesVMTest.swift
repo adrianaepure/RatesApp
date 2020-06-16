@@ -1,5 +1,5 @@
 //
-//  LatestRatesVMTest.swift
+//  HistoryRatesVMTest.swift
 //  RatesAppTests
 //
 //  Created by Adriana Epure on 15/06/2020.
@@ -9,24 +9,24 @@
 import XCTest
 @testable import RatesApp
 
-class LatestRatesVMTest: XCTestCase, LatestRatesVMDelegate {
+class HistoryRatesVMTest: XCTestCase, HistoryRatesVMDelegate {
     
     private var expectation: XCTestExpectation!
 
     func testInitialization() {
         
         // Initialize Profile View Model
-        let latestRatesVM = LatestRatesVM()
-        XCTAssertNotNil(latestRatesVM, "The latest rates view model should not be nil.")
+        let historyRatestVM = HistoryRatesVM()
+        XCTAssertNotNil(historyRatestVM, "The history Rates view model should not be nil.")
         
     }
     func testDelegateCalled(){
         
-        expectation = expectation(description: "The Latest Rates view model should fetch data")
+        expectation = expectation(description: "The history Rates view model should fetch data")
         // Initialize Profile View Model
-        let latestRatesVM = LatestRatesVM()
-        latestRatesVM.delegate = self
-        latestRatesVM.getLatestRatesData()
+        let historyRatestVM = HistoryRatesVM()
+        historyRatestVM.delegate = self
+        historyRatestVM.getHistoryRatesData()
         waitForExpectations(timeout: 20)
     }
     func didFinishLoading() {

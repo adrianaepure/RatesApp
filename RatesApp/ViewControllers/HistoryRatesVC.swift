@@ -14,7 +14,7 @@ import TinyConstraints
 
 class HistoryRatesVC: UIViewController{
     
-    private var vm = HistoryRatesVM(baseCurrency: SharedSettings.shared.baseCurrency)
+    private var vm = HistoryRatesVM()
     
     //MARK: - Views
     lazy var contentViewSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + 400)
@@ -81,7 +81,7 @@ class HistoryRatesVC: UIViewController{
         for currency in  SharedSettings.shared.baseCurrency.getRemainingCurrenciesArray() {
             let currencyString = currency.rawValue
             let points = self.vm.getHistoryRates(for: currencyString)
-            let chart = getChartForCurrency(currency: self.vm.baseCurrency.rawValue)
+            let chart = getChartForCurrency(currency: SharedSettings.shared.baseCurrency.rawValue)
             chart.data = getChartData(points, label: currencyString)
             chart.data?.setDrawValues(false)
             chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: points.0)
