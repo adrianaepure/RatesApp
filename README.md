@@ -24,7 +24,7 @@ Documentation for all api calls, with examples, is available at [Exchange Rates 
 
 # Installation
 
-* Clone the project from `CurrencyApp` repository. 
+* Clone the project from `RatesApp` repository. 
 * Select the appropriate Xcode version.
 * Navigate to project's folder and use `$ pod install`  command to install the require pods.
 * Select an appropriate Device or Simulator to build and run the code
