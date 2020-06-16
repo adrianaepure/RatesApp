@@ -16,7 +16,6 @@ class LatestRatesVC: UIViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vm.delegate = self;

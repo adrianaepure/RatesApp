@@ -14,6 +14,8 @@
 		3A364D8224977BD900DB321F /* SharedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D8124977BD900DB321F /* SharedSettings.swift */; };
 		3A364D842497B52D00DB321F /* LatestRatesVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D832497B52D00DB321F /* LatestRatesVMTest.swift */; };
 		3A364D862497BB0900DB321F /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D852497BB0900DB321F /* UIImageViewExtension.swift */; };
+		3A364D8824989D2D00DB321F /* LatestRatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D8724989D2D00DB321F /* LatestRatesModel.swift */; };
+		3A364D8A24989D3A00DB321F /* HistoryRatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A364D8924989D3A00DB321F /* HistoryRatesModel.swift */; };
 		3A4B19982494C41700C04289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19972494C41700C04289 /* AppDelegate.swift */; };
 		3A4B199A2494C41700C04289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B19992494C41700C04289 /* SceneDelegate.swift */; };
 		3A4B199C2494C41800C04289 /* LatestRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B199B2494C41800C04289 /* LatestRatesVC.swift */; };
@@ -55,6 +57,8 @@
 		3A364D8124977BD900DB321F /* SharedSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSettings.swift; sourceTree = "<group>"; };
 		3A364D832497B52D00DB321F /* LatestRatesVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesVMTest.swift; sourceTree = "<group>"; };
 		3A364D852497BB0900DB321F /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		3A364D8724989D2D00DB321F /* LatestRatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesModel.swift; sourceTree = "<group>"; };
+		3A364D8924989D3A00DB321F /* HistoryRatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesModel.swift; sourceTree = "<group>"; };
 		3A4B19942494C41700C04289 /* RatesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4B19972494C41700C04289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A4B19992494C41700C04289 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				3A634B312494CB5A00E9E9C0 /* RateModel.swift */,
+				3A364D8724989D2D00DB321F /* LatestRatesModel.swift */,
+				3A364D8924989D3A00DB321F /* HistoryRatesModel.swift */,
 				3A634B332494CB6E00E9E9C0 /* Currency.swift */,
 			);
 			path = Models;
@@ -397,10 +403,12 @@
 				3A634B342494CB6E00E9E9C0 /* Currency.swift in Sources */,
 				3A634B362494CF9800E9E9C0 /* WebServiceManager.swift in Sources */,
 				3A4B19982494C41700C04289 /* AppDelegate.swift in Sources */,
+				3A364D8824989D2D00DB321F /* LatestRatesModel.swift in Sources */,
 				3A364D8224977BD900DB321F /* SharedSettings.swift in Sources */,
 				3A4B199A2494C41700C04289 /* SceneDelegate.swift in Sources */,
 				3A364D7E24976D5E00DB321F /* RefreshIntervalVC.swift in Sources */,
 				3A364D7C24976D4C00DB321F /* BaseCurrencyVC.swift in Sources */,
+				3A364D8A24989D3A00DB321F /* HistoryRatesModel.swift in Sources */,
 				3A634B322494CB5A00E9E9C0 /* RateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

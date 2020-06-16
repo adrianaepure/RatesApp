@@ -8,12 +8,13 @@
 
 import Foundation
 
+//MARK: - HistoryRatesVMDelegate protocol
 protocol HistoryRatesVMDelegate {
     func didFinishLoading()
 }
 
 
-
+//MARK: - HistoryRatesVM class
 class HistoryRatesVM {
     var baseCurrency: Currency
     var rates: [String: [ValueByDate]]?
@@ -23,7 +24,10 @@ class HistoryRatesVM {
     }
     
 }
+//MARK: - HistoryRatesVM methods
+
 extension HistoryRatesVM {
+     ///fetch  rates historical data data and send an update when the request is finished
     @objc func getHistoryRatesData() {
         RatesClient.shared.fetchHistoryRates() { (result, error) in
             guard let data = result else {return}
@@ -47,6 +51,7 @@ extension HistoryRatesVM {
             
         }
     }
+     ///method used to get an array of dates and an array of values for populating a chart in HistoryRatesVC for the given currency
     func getHistoryRates(for currency: String) -> ([String], [Double]){
         let dates = self.rates?[currency]?.compactMap{$0.date.customShortDateFormatter()}
         let values = self.rates?[currency]?.compactMap{$0.value}

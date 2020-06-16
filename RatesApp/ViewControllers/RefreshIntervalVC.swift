@@ -18,6 +18,7 @@ class RefreshIntervalVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        ///Mark the chosen refresh time as selected
         if cell.reuseIdentifier == SharedSettings.shared.refreshTime {
             cell.accessoryType = .checkmark
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
@@ -29,6 +30,7 @@ class RefreshIntervalVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         if let name = cell?.reuseIdentifier {
+             ///Mark the user selection refresh time as selected
             if (SharedSettings.shared.refreshTime != name) {
                 SharedSettings.shared.refreshTime = name
                 cell?.accessoryType = .checkmark

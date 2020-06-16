@@ -93,7 +93,7 @@ class HistoryRatesVC: UIViewController{
         
     }
     /// Create a custom chart for a given currency
-       /// - Parameter currency: corresponding currency name
+       /// - Parameter currency: corresponding currency 
        private func getChartForCurrency(currency: String) -> LineChartView {
            let chartView = LineChartView()
            chartView.backgroundColor = .white
@@ -119,8 +119,7 @@ class HistoryRatesVC: UIViewController{
        
        /// Generate the chart data set for a given set of x and y coordinates values
        /// - Parameters:
-       ///   - dataPoints: array of currency dates
-       ///   - values: array of currency values
+       ///   - dataPoints: array of currency dates and values
        ///   - label: currency type
      private func getChartData(_ dataPoints: ([String], [Double]), label: String) -> LineChartData {
            var entries: [ChartDataEntry] = Array()

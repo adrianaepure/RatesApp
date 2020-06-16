@@ -14,11 +14,6 @@ public enum APIsource: String {
     case latestURL = "https://api.exchangeratesapi.io/latest"
 }
 
-public enum WebServiceManagerError: Error {
-    case invalidURL(String)
-    case parseError(String)
-    case forwarded(Error)
-}
 
 public protocol WebServiceManagerProtocol {
     func fetchData<T>(for url:URL, completionHandler:(T, Error) -> Void)

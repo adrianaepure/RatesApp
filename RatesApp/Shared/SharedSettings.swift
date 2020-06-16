@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+///Class that holds the user settings for base currency and refresh time
+///By default the base currency is EURO and refresh time is 3 seconds
 public class SharedSettings: NSObject {
     static let shared = SharedSettings()
     

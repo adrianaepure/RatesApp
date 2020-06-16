@@ -7,19 +7,14 @@
 //
 
 import UIKit
-//
-//struct APIPaths {
-//    static let latestPath = URL(string: "https://api.exchangeratesapi.io/latest")
-//    static let historyPath = URL(string: "https://api.exchangeratesapi.io/history")
-//}
+
 public class RatesClient: NSObject {
     static let shared = RatesClient()
     
 }
 extension RatesClient{
+    ///fetch latest rates data and call the completion block
     func fetchLatestRates(completion:@escaping (_ result:LatestRateModel?, _ error: NSError?) -> ()){
-        //        fetch data
-        //call the completion block
         let service = WebServiceManager()
         let base = SharedSettings.shared.baseCurrency
         let otherSymbolsString = base.getRemainingCurrenciesString()
@@ -33,6 +28,7 @@ extension RatesClient{
             }
         }
     }
+     ///fetch history rates data and call the completion block
     func fetchHistoryRates(completion:@escaping (_ result:HistoryRates?, _ error: NSError?) -> ()){
         let service = WebServiceManager()
         let base = SharedSettings.shared.baseCurrency
@@ -50,20 +46,4 @@ extension RatesClient{
         }
     }
 }
-class MyError: NSObject, LocalizedError {
-    var desc = ""
-    init(str: String) {
-        desc = str
-    }
-    override var description: String {
-        get {
-            return "MyError: \(desc)"
-        }
-    }
-    //You need to implement `errorDescription`, not `localizedDescription`.
-    var errorDescription: String? {
-        get {
-            return self.description
-        }
-    }
-}
+
